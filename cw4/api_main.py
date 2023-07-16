@@ -22,7 +22,7 @@ class HeadHunterAPI(VacancyAPI):
 
 class SuperJobAPI(VacancyAPI):
     def get_vacancies(self, keyword):
-        api_key: str = os.getenv('SUPERJOB_API_KEY')
+        api_key: str = os.getenv('SJ_API_KEY')
         params = {'keyword': keyword, 'per_page': 100, 'count': 100}
         headers = {'X-Api-App-Id': api_key}
         url = 'https://api.superjob.ru/2.0/vacancies/'
