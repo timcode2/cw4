@@ -7,10 +7,8 @@ class VacancyStorage(ABC):
     def add_vacancy(self, vacancy):
         pass
 
-    @abstractmethod
-    def delete_vacancy(self, vacancy):
-        pass
-
 
 class JSONVacancyStorage(VacancyStorage):
-    pass
+    def add_vacancy(self, vacancy_list):
+        with open('filtered_vacancy.json', 'w', encoding='utf-8') as f:
+            json.dump(vacancy_list, f, indent=4, ensure_ascii=False)
