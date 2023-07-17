@@ -13,7 +13,7 @@ class VacancyAPI(ABC):
 class HeadHunterAPI(VacancyAPI):
     def get_vacancies(self, keyword):
         url = 'https://api.hh.ru/vacancies'
-        params = {'text': keyword, 'per_page': 100}
+        params = {'text': keyword, 'page': 0, 'per_page': 100}
         response = requests.get(url, params=params)
         data = response.content.decode()
         response.close()
