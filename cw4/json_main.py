@@ -3,6 +3,7 @@ import json
 
 
 class VacancyStorage(ABC):
+    '''СОздан абстрактный класс для работы с JSON-файлом'''
     @abstractmethod
     def add_vacancy(self, vacancy):
         pass
@@ -13,6 +14,7 @@ class VacancyStorage(ABC):
 
 
 class JSONVacancyStorage(VacancyStorage):
+    '''Класс для преобразования данных в JSON-формат и сохранения в отдельный файл'''
     def add_vacancy(self, vacancy_list):
         with open('vacancies.json', 'w', encoding='utf-8') as f:
             json.dump(vacancy_list, f, indent=4, ensure_ascii=False)

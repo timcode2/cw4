@@ -2,7 +2,7 @@ from api_main import HeadHunterAPI, SuperJobAPI
 from json_main import JSONVacancyStorage
 from main import add_hh_vacancies, add_sj_vacancies
 
-
+#  Функция для работы с пользователем
 def user_menu():
     hh_api = HeadHunterAPI()
     sj_api = SuperJobAPI()

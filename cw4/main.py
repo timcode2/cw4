@@ -1,7 +1,7 @@
 import json
 from vacancy import Vacancy
 
-
+# Созданы функции для работы с атрибутами данных словаря hh.ru и superjob.ru
 def add_hh_vacancies(hh_vacancies):
     hh_vacancies_dict = json.loads(hh_vacancies)["items"]
     hh_vacancies_list = []

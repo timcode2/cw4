@@ -2,6 +2,7 @@ import json
 
 
 class Vacancy:
+    '''Создан класс для корректной структуры данных в JSON-файле'''
     def __init__(self, name, url, city, salary, description) -> None:
         self.name = name  # название вакансии
         self.url = url  # сылка на вакансию
