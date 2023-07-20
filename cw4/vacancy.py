@@ -14,4 +14,13 @@ class Vacancy:
         return json.dumps(self.__dict__, ensure_ascii=False, indent=2)
 
     def __lt__(self, other):
+        if not isinstance(other, self.salary):
+            raise ValueError('Невозможно сложить сумму')
         return self.salary < other.salary
+
+    def __gt__(self, other):
+        if not isinstance(other, self.salary):
+            raise ValueError('Невозможно сложить сумму')
+        return self.salary > other.salary
+
+# проврерка на тип other  и магический метод __gt__
